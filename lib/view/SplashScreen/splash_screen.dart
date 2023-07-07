@@ -20,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen>
     super.initState();
 
     logoAnimation = AnimationController(
-        vsync: this, duration: Duration(milliseconds: 1000));
+        vsync: this, duration: const Duration(milliseconds: 1000));
     opacityAnimation = Tween<double>(begin: 0, end: 1).animate(logoAnimation)
       ..addStatusListener((AnimationStatus status) {
         if (status == AnimationStatus.completed) {
@@ -44,7 +44,7 @@ class _SplashScreenState extends State<SplashScreen>
                   builder: (context, child) {
                     return AnimatedOpacity(
                         opacity: !isVisible ? 1 : 0,
-                        duration: Duration(milliseconds: 700),
+                        duration: const Duration(milliseconds: 700),
                         child: AnimatedTextKit(
                           animatedTexts: [
                             TypewriterAnimatedText(
@@ -74,7 +74,7 @@ class _SplashScreenState extends State<SplashScreen>
                   builder: ((context, child) {
                     return AnimatedOpacity(
                       opacity: isVisible ? logoAnimation.value : 0,
-                      duration: Duration(milliseconds: 700),
+                      duration: const Duration(milliseconds: 700),
                       child: Container(
                         child: Image.asset(
                           "assets/icon.png",

@@ -1,6 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:treak_clan/view/HomePage/home_card.dart';
+import 'package:treak_clan/view/HomeDashboard/home_card.dart';
 
 class HomeSlider extends StatefulWidget {
   const HomeSlider({super.key});
